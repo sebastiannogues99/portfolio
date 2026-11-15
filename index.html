@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="Portfolio de estudiante de Licenciatura en Sistemas: proyectos, CV, aptitudes y contacto.">
+  <meta name="theme-color" content="#E8EBEE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14181D" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="barra">
+    <div class="barra__interior">
+      <a class="barra__nombre" href="#inicio" data-campo="nombre"></a>
+      <nav aria-label="Secciones">
+        <ul class="barra__links">
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#cv">CV</a></li>
+          <li><a href="#aptitudes">Aptitudes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="contenedor">
+    <section id="inicio" class="portada" aria-labelledby="titulo-nombre">
+      <h1 id="titulo-nombre" class="portada__nombre" data-campo="nombre"></h1>
+      <p class="portada__rol" id="portada-rol"></p>
+      <p class="portada__resumen" data-campo="resumen"></p>
+      <p class="portada__disponible" data-campo="disponibilidad"></p>
+      <div class="acciones">
+        <a class="boton boton--lleno" href="#proyectos">Ver proyectos</a>
+        <a class="boton" href="#cv">Ver CV</a>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="hoja" aria-labelledby="t-sobre">
+      <h2 id="t-sobre" class="pestana">Sobre mí</h2>
+      <div class="sobre">
+        <div class="sobre__texto" id="sobre-texto"></div>
+        <dl class="datos" id="sobre-datos"></dl>
+      </div>
+    </section>
+
+    <section id="proyectos" class="hoja" aria-labelledby="t-proyectos">
+      <h2 id="t-proyectos" class="pestana">Proyectos <span class="pestana__cuenta" id="cuenta-proyectos"></span></h2>
+      <ul class="proyectos" id="lista-proyectos"></ul>
+      <nav class="paginacion" id="paginacion" aria-label="Páginas de proyectos"></nav>
+    </section>
+
+    <section id="cv" class="hoja" aria-labelledby="t-cv">
+      <h2 id="t-cv" class="pestana">CV</h2>
+      <div class="cv__visor">
+        <object id="cv-objeto" type="application/pdf" aria-label="CV en PDF">
+          <div class="cv__alternativa">
+            <p>Tu navegador no puede mostrar el PDF dentro de la página.</p>
+            <p>Abrilo o descargalo con los botones de abajo.</p>
+          </div>
+        </object>
+      </div>
+      <div class="acciones">
+        <a class="boton boton--lleno" id="cv-descarga" href="#" download>Descargar CV</a>
+        <a class="boton" id="cv-abrir" href="#" target="_blank" rel="noopener">Abrir en otra pestaña</a>
+      </div>
+    </section>
+
+    <section id="aptitudes" class="hoja" aria-labelledby="t-aptitudes">
+      <h2 id="t-aptitudes" class="pestana">Aptitudes y certificaciones</h2>
+      <dl class="aptitudes" id="lista-aptitudes"></dl>
+      <h3 class="subtitulo">Certificaciones</h3>
+      <ul class="certificaciones" id="lista-certificaciones"></ul>
+    </section>
+
+    <section id="contacto" class="hoja" aria-labelledby="t-contacto">
+      <h2 id="t-contacto" class="pestana">Contacto</h2>
+      <p class="contacto__intro">Escribime por WhatsApp, mail o LinkedIn.</p>
+      <ul class="contacto" id="lista-contacto"></ul>
+    </section>
+  </main>
+
+  <footer class="pie contenedor">
+    <p id="pie-texto"></p>
+  </footer>
+
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
