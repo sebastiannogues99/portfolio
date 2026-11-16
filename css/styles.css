@@ -11,6 +11,7 @@
   --acento-suave: #E3EAF6;
   --sobre-acento: #FFFFFF;
   --ok: #2F7D4F;
+  --raya: rgb(31 42 55 / 5%);   /* trama diagonal del fondo */
 
   --fuente: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
 
@@ -37,6 +38,7 @@
     --acento-suave: #24324A;
     --sobre-acento: #10161D;
     --ok: #6CC08F;
+    --raya: rgb(228 232 236 / 6%);
   }
 }
 
@@ -55,7 +57,14 @@ html {
 
 body {
   margin: 0;
-  background: var(--fondo);
+  background-color: var(--fondo);
+  /* Trama diagonal sutil: líneas finas a 135° sobre el color de fondo. */
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0 10px,
+    var(--raya) 10px 11px
+  );
+  background-attachment: fixed;
   color: var(--tinta);
   font-family: var(--fuente);
   font-size: var(--t-base);
@@ -466,17 +475,43 @@ h3, .subtitulo {
   color: var(--gris);
 }
 
-.cv__abrir {
+.cv__acciones {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+}
+
+.cv__accion {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
+  gap: 0.4rem;
+  min-height: 2rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--linea);
   border-radius: var(--radio);
+  background: transparent;
   color: var(--gris);
+  font-size: var(--t-sm);
+  font-weight: 700;
+  text-decoration: none;
 }
-.cv__abrir:hover { background: var(--fondo); color: var(--acento); }
-.cv__abrir .icono { width: 1.15rem; height: 1.15rem; }
+.cv__accion:hover { background: var(--fondo); color: var(--acento); border-color: var(--acento); }
+.cv__accion .icono { width: 1.05rem; height: 1.05rem; }
+
+.cv__accion--lleno {
+  background: var(--acento);
+  border-color: var(--acento);
+  color: var(--sobre-acento);
+}
+.cv__accion--lleno:hover {
+  background: color-mix(in srgb, var(--acento) 85%, var(--tinta));
+  border-color: color-mix(in srgb, var(--acento) 85%, var(--tinta));
+  color: var(--sobre-acento);
+}
+
+.cv__accion[aria-label] { padding: 0.25rem; width: 2rem; }
 
 .cv__visor {
   height: min(85vh, 1100px);

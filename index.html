@@ -64,19 +64,19 @@
         <div class="cv__cabecera">
           <span class="cv__icono-doc" aria-hidden="true">PDF</span>
           <span class="cv__nombre" id="cv-nombre">CV.pdf</span>
-          <a class="cv__abrir" id="cv-abrir" href="#" target="_blank" rel="noopener" aria-label="Abrir CV en otra pestaña"></a>
+          <div class="cv__acciones">
+            <a class="cv__accion cv__accion--lleno" id="cv-descarga" href="#" download><span class="icono" id="cv-descarga-icono" aria-hidden="true"></span>Descargar</a>
+            <a class="cv__accion" id="cv-abrir" href="#" target="_blank" rel="noopener" aria-label="Abrir CV en otra pestaña" title="Abrir en otra pestaña"></a>
+          </div>
         </div>
         <div class="cv__visor">
           <object id="cv-objeto" type="application/pdf" aria-label="CV en PDF">
             <div class="cv__alternativa">
               <p>Tu navegador no puede mostrar el PDF dentro de la página.</p>
-              <p>Abrilo o descargalo con los botones de abajo.</p>
+              <p>Abrilo o descargalo con los botones de arriba.</p>
             </div>
           </object>
         </div>
-      </div>
-      <div class="acciones">
-        <a class="boton boton--lleno" id="cv-descarga" href="#" download>Descargar CV</a>
       </div>
     </section>
 

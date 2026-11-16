@@ -6,11 +6,10 @@
  * ─────────────────────────────────────────────────────────────
  */
 const PORTFOLIO = {
-  nombre: "Sebastián Nogues",
+  nombre: "Sebastian Nogues",
   rol: "Estudiante de Licenciatura en Sistemas",
   ubicacion: "Universidad Nacional de Lanús",
-  resumen:
-    "Estudiante de Licenciatura en Sistemas, con bases sólidas de programación y bases de datos con experiencia real en administración, atención al cliente y soporte operativo. Listo para aportar compromiso, resolución de problemas y ganas de seguir aprendiendo en un equipo de tecnología.",
+  resumen: "",
   disponibilidad: "",
 
   sobreMi: [
@@ -43,7 +42,7 @@ const PORTFOLIO = {
   // Para actualizarlo, reemplazá el archivo assets/cv.pdf (mismo nombre).
   // nombreDescarga: nombre con el que se descarga el PDF (no afecta al archivo real en el repo).
   cv: {
-    archivo: "assets/cv.pdf",
+    archivo: "assets/CV - Sebastian Nogues.pdf",
     nombreDescarga: "CV - Sebastian Nogues.pdf",
   },
 
