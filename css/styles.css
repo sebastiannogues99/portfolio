@@ -266,6 +266,11 @@ h3, .subtitulo {
 .datos dd { font-weight: 500; }
 
 /* ── Proyectos: grilla paginada ── */
+.proyectos__vacio {
+  color: var(--gris);
+  padding: 1.5rem 0;
+}
+
 .proyectos {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
