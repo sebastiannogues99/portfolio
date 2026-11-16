@@ -66,7 +66,10 @@
   const lista = $("#lista-proyectos");
   const paginacion = $("#paginacion");
   $("#cuenta-proyectos").textContent = proyectos.length ? `(${proyectos.length})` : "";
-  ocultarSiVacio($("#proyectos"), !proyectos.length);
+  // La sección queda siempre visible (con un mensaje) aunque todavía no haya proyectos cargados.
+  $("#proyectos-vacio").hidden = proyectos.length > 0;
+  ocultarSiVacio(lista, !proyectos.length);
+  ocultarSiVacio(paginacion, !proyectos.length);
 
   // Proyectos por página según el ancho: 2 filas de 4 en desktop.
   const tamanios = [
@@ -244,6 +247,13 @@
     ));
   });
   ocultarSiVacio($("#contacto"), !filas.length);
+
+  /* ── Enlaces a secciones ocultas ────────────────── */
+  // Si una sección quedó vacía (por ejemplo Proyectos), se oculta su enlace de navegación.
+  document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    const destino = document.querySelector(a.getAttribute("href"));
+    if (destino && destino.hidden) (a.closest("li") || a).hidden = true;
+  });
 
   /* ── Pie ────────────────────────────────────────── */
   $("#pie-texto").textContent =

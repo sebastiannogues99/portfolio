@@ -5,43 +5,38 @@
  *  Los campos vacíos ("") o las listas vacías ([]) se ocultan solos.
  * ─────────────────────────────────────────────────────────────
  */
-const LOREM_CORTO = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.";
-
 const PORTFOLIO = {
-  nombre: "Nombre Apellido",
+  nombre: "Sebastián Nogues",
   rol: "Estudiante de Licenciatura en Sistemas",
-  ubicacion: "Ciudad, País",
+  ubicacion: "Universidad Nacional de Lanús",
   resumen:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.",
-  disponibilidad: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Estudiante de Licenciatura en Sistemas, con bases sólidas de programación y bases de datos con experiencia real en administración, atención al cliente y soporte operativo. Listo para aportar compromiso, resolución de problemas y ganas de seguir aprendiendo en un equipo de tecnología.",
+  disponibilidad: "",
 
   sobreMi: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "Soy estudiante de Licenciatura en Sistemas y acumulé experiencia en tareas administrativas, atención al cliente y soporte operativo. Me ocupé de la gestión administrativa general y la documentación comercial, la elaboración de presupuestos y remitos, el seguimiento de clientes y proveedores y el control y reposición de stock.",
+    "En Ortopedia BM Medicine (marzo 2023 – diciembre 2024) mejoré la organización operativa diaria y reduje las demoras administrativas. Antes, en Doña Alicia Fiambrería (enero 2019 – abril 2020), trabajé en el manejo de caja, la atención al cliente y la reposición de mercadería, colaborando en el orden del local y en la experiencia de atención. Hoy busco seguir creciendo en el área de sistemas, con foco en programación y bases de datos.",
   ],
 
   datos: [
-    { etiqueta: "Ubicación", valor: "Ciudad, País" },
-    { etiqueta: "Modalidad", valor: "Presencial / híbrida / remota" },
-    { etiqueta: "Idiomas", valor: "Idioma (nivel), idioma (nivel)" },
+    { etiqueta: "Ubicación", valor: "Lanús Oeste, Buenos Aires, Argentina" },
+    { etiqueta: "Formación", valor: "Licenciatura en Sistemas (en curso)" },
+    { etiqueta: "Experiencia", valor: "Administración, atención al cliente y soporte operativo" },
   ],
 
   // Se muestran de a 8 por página en desktop (2 filas de 4).
   // imagen: ruta a una captura (ej. "assets/proyectos/turnero.png"). Si queda vacía, se ve un recuadro de reemplazo.
   // repo: link al código (botón con ícono de GitHub). demo: link al sitio publicado (botón con ícono web).
   proyectos: [
-    { nombre: "Proyecto uno", anio: "2026", descripcion: LOREM_CORTO, stack: ["Tecnología", "Tecnología", "Tecnología"], imagen: "", repo: "https://github.com/sebastiannogues99", demo: "https://ejemplo.com" },
-    { nombre: "Proyecto dos", anio: "2026", descripcion: LOREM_CORTO, stack: ["Tecnología", "Tecnología"], imagen: "", repo: "https://github.com/sebastiannogues99", demo: "" },
-    { nombre: "Proyecto tres", anio: "2026", descripcion: LOREM_CORTO, stack: ["Tecnología", "Tecnología"], imagen: "", repo: "https://github.com/sebastiannogues99", demo: "https://ejemplo.com" },
-    { nombre: "Proyecto cuatro", anio: "2025", descripcion: LOREM_CORTO, stack: ["Tecnología", "Tecnología"], imagen: "", repo: "https://github.com/sebastiannogues99", demo: "" },
-    { nombre: "Proyecto cinco", anio: "2025", descripcion: LOREM_CORTO, stack: ["Tecnología", "Tecnología", "Tecnología"], imagen: "", repo: "https://github.com/sebastiannogues99", demo: "https://ejemplo.com" },
-    { nombre: "Proyecto seis", anio: "2025", descripcion: LOREM_CORTO, stack: ["Tecnología", "Tecnología"], imagen: "", repo: "https://github.com/sebastiannogues99", demo: "" },
-    { nombre: "Proyecto siete", anio: "2025", descripcion: LOREM_CORTO, stack: ["Tecnología", "Tecnología"], imagen: "", repo: "https://github.com/sebastiannogues99", demo: "https://ejemplo.com" },
-    { nombre: "Proyecto ocho", anio: "2024", descripcion: LOREM_CORTO, stack: ["Tecnología", "Tecnología"], imagen: "", repo: "https://github.com/sebastiannogues99", demo: "" },
-    { nombre: "Proyecto nueve", anio: "2024", descripcion: LOREM_CORTO, stack: ["Tecnología", "Tecnología", "Tecnología"], imagen: "", repo: "https://github.com/sebastiannogues99", demo: "https://ejemplo.com" },
-    { nombre: "Proyecto diez", anio: "2024", descripcion: LOREM_CORTO, stack: ["Tecnología", "Tecnología"], imagen: "", repo: "https://github.com/sebastiannogues99", demo: "" },
-    { nombre: "Proyecto once", anio: "2023", descripcion: LOREM_CORTO, stack: ["Tecnología", "Tecnología"], imagen: "", repo: "https://github.com/sebastiannogues99", demo: "" },
-    { nombre: "Proyecto doce", anio: "2023", descripcion: LOREM_CORTO, stack: ["Tecnología", "Tecnología"], imagen: "", repo: "https://github.com/sebastiannogues99", demo: "https://ejemplo.com" },
+    {
+      nombre: "Portfolio",
+      anio: "2026",
+      descripcion: "Mi sitio personal: presentación, CV, aptitudes y contacto. Hecho con HTML, CSS y JavaScript sin frameworks.",
+      stack: ["HTML", "CSS", "JavaScript"],
+      imagen: "",
+      repo: "https://github.com/sebastiannogues99/portfolio",
+      demo: "https://sebastian-nogues.vercel.app/",
+    },
   ],
 
   // El CV se muestra embebido desde este PDF del repo.
@@ -51,27 +46,36 @@ const PORTFOLIO = {
   },
 
   aptitudes: [
-    { grupo: "Lenguajes", items: ["Lenguaje", "Lenguaje", "Lenguaje", "Lenguaje"] },
-    { grupo: "Frameworks y librerías", items: ["Framework", "Framework", "Framework"] },
-    { grupo: "Bases de datos", items: ["Base de datos", "Base de datos"] },
-    { grupo: "Herramientas", items: ["Herramienta", "Herramienta", "Herramienta", "Herramienta"] },
-    { grupo: "Habilidades blandas", items: ["Habilidad", "Habilidad", "Habilidad"] },
+    { grupo: "Lenguajes", items: ["C", "JavaScript", "Python"] },
+    { grupo: "Bases de datos", items: ["MySQL"] },
+    { grupo: "Herramientas", items: ["Microsoft Excel", "Microsoft PowerPoint"] },
+    {
+      grupo: "Habilidades blandas",
+      items: [
+        "Comunicación efectiva",
+        "Trabajo en equipo",
+        "Resolución de problemas",
+        "Orientación al cliente",
+        "Gestión del tiempo",
+        "Adaptabilidad",
+        "Aprendizaje continuo",
+        "Responsabilidad",
+        "Autonomía",
+        "Capacidad analítica",
+      ],
+    },
   ],
 
-  certificaciones: [
-    { nombre: "Nombre de la certificación", emisor: "Institución emisora", fecha: "20XX", url: "https://ejemplo.com/credencial" },
-    { nombre: "Nombre de la certificación", emisor: "Institución emisora", fecha: "20XX", url: "" },
-    { nombre: "Nombre de la certificación", emisor: "Institución emisora", fecha: "20XX", url: "" },
-  ],
+  certificaciones: [],
 
   contacto: {
     // Se muestra tal cual. El link abre WhatsApp con el número en formato internacional.
-    telefono: "+54 9 11 5957 6091",
-    whatsapp: "5491159576091",
+    telefono: "+54 11 5957-6091",
+    whatsapp: "5491159576091", // el CV no incluye el 9 de celular; se agrega para que abra WhatsApp
     email: "sebastiannogues99@gmail.com",
     linkedin: "sebastian-nogues",   // usuario: linkedin.com/in/<usuario>
     github: "sebastiannogues99",    // usuario: github.com/<usuario>
   },
 
-  actualizado: "mes de 20XX",
+  actualizado: "noviembre de 2026",
 };
