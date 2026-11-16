@@ -41,8 +41,10 @@ const PORTFOLIO = {
 
   // El CV se muestra embebido desde este PDF del repo.
   // Para actualizarlo, reemplazá el archivo assets/cv.pdf (mismo nombre).
+  // nombreDescarga: nombre con el que se descarga el PDF (no afecta al archivo real en el repo).
   cv: {
     archivo: "assets/cv.pdf",
+    nombreDescarga: "CV - Sebastian Nogues.pdf",
   },
 
   aptitudes: [

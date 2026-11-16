@@ -154,9 +154,15 @@
   /* ── CV embebido ────────────────────────────────── */
   const archivoCV = P.cv && P.cv.archivo;
   if (archivoCV) {
-    $("#cv-objeto").data = `${archivoCV}#view=FitH`;
+    // Parámetros de PDF.js/visor nativo: oculta la barra de herramientas del navegador
+    // para que el PDF se vea integrado en la tarjeta en lugar del visor crudo de Chrome.
+    $("#cv-objeto").data = `${archivoCV}#toolbar=0&navpanes=0&view=FitH`;
     $("#cv-descarga").href = archivoCV;
+    $("#cv-descarga").download = (P.cv && P.cv.nombreDescarga) || "";
     $("#cv-abrir").href = archivoCV;
+    $("#cv-abrir").append(icono("web"));
+    const nombre = (P.cv && P.cv.nombreDescarga) || archivoCV.split("/").pop();
+    $("#cv-nombre").textContent = nombre;
   } else {
     $("#cv").hidden = true;
   }
