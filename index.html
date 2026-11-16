@@ -60,17 +60,23 @@
 
     <section id="cv" class="hoja" aria-labelledby="t-cv">
       <h2 id="t-cv" class="pestana">CV</h2>
-      <div class="cv__visor">
-        <object id="cv-objeto" type="application/pdf" aria-label="CV en PDF">
-          <div class="cv__alternativa">
-            <p>Tu navegador no puede mostrar el PDF dentro de la página.</p>
-            <p>Abrilo o descargalo con los botones de abajo.</p>
-          </div>
-        </object>
+      <div class="cv__tarjeta">
+        <div class="cv__cabecera">
+          <span class="cv__icono-doc" aria-hidden="true">PDF</span>
+          <span class="cv__nombre" id="cv-nombre">CV.pdf</span>
+          <a class="cv__abrir" id="cv-abrir" href="#" target="_blank" rel="noopener" aria-label="Abrir CV en otra pestaña"></a>
+        </div>
+        <div class="cv__visor">
+          <object id="cv-objeto" type="application/pdf" aria-label="CV en PDF">
+            <div class="cv__alternativa">
+              <p>Tu navegador no puede mostrar el PDF dentro de la página.</p>
+              <p>Abrilo o descargalo con los botones de abajo.</p>
+            </div>
+          </object>
+        </div>
       </div>
       <div class="acciones">
         <a class="boton boton--lleno" id="cv-descarga" href="#" download>Descargar CV</a>
-        <a class="boton" id="cv-abrir" href="#" target="_blank" rel="noopener">Abrir en otra pestaña</a>
       </div>
     </section>
 

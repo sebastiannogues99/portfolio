@@ -423,15 +423,68 @@ h3, .subtitulo {
 }
 
 /* ── CV embebido ── */
+.cv__tarjeta {
+  border: 1px solid var(--linea);
+  border-radius: calc(var(--radio) * 2);
+  background: var(--fondo);
+  overflow: hidden;
+  box-shadow: 0 1.25rem 2.5rem -1.75rem rgb(0 0 0 / 35%);
+}
+
+.cv__cabecera {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 0.9rem;
+  background: var(--hoja);
+  border-bottom: 1px solid var(--linea);
+}
+
+.cv__icono-doc {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 1.5rem;
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  background: var(--acento);
+  color: var(--sobre-acento);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.cv__nombre {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: var(--t-sm);
+  color: var(--gris);
+}
+
+.cv__abrir {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radio);
+  color: var(--gris);
+}
+.cv__abrir:hover { background: var(--fondo); color: var(--acento); }
+.cv__abrir .icono { width: 1.15rem; height: 1.15rem; }
+
 .cv__visor {
   height: min(85vh, 1100px);
   min-height: 28rem;
-  border: 1px solid var(--linea);
-  border-radius: var(--radio);
   background: var(--fondo);
   overflow: hidden;
 }
-.cv__visor object { display: block; width: 100%; height: 100%; }
+.cv__visor object { display: block; width: 100%; height: 100%; border: 0; }
 
 .cv__alternativa {
   display: grid;
